@@ -68,5 +68,7 @@ Omrails::Application.configure do
   # In production, :host should be set to the actual host of your application.
   # This needs to be done for some features to work in production.
   # There is a RailsCast on this. Can investigate Forgot Password with Devise
+  # Workaround is to eliminate Forgot Password functionality. Did this by hiding an option
+  # in models - user.rb 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
