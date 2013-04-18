@@ -66,5 +66,7 @@ Omrails::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # In production, :host should be set to the actual host of your application.
+  # This needs to be done for some features to work in production.
+  # There is a RailsCast on this. Can investigate Forgot Password with Devise
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
