@@ -1,0 +1,33 @@
+/* For awesome examples, go to Bootstrap - Getting Started - Examples */
+
+/* You could change the font. */
+/*$baseFontFamily: Oxygen;
+@import url(http://fonts.googleapis.com/css?family=Oxygen);*/
+
+/* Can go to Bootstrap's website and go to Customize - Customize variables */
+/* Note: There's has an @ sign and in Bootstrap-sass, it's a $ sign */
+
+/* This changes the color of the Primary button */
+$btnPrimaryBackground: green;
+
+/* Change these to change the navbar colors */
+$navbarBackgroundHighlight: white;
+$navbarBackground: white;
+
+@import 'bootstrap';
+
+@import 'bootstrap-responsive';
+
+/* This removes the underline and shadow under the navbar menu */
+.navbar-inner {
+	@include box-shadow(none !important);
+	border: 0;
+}
+
+.footer {
+	margin-top: 50px;
+	color: $grayLight;
+	a {
+		color: $gray;
+	}
+}
