@@ -72,4 +72,14 @@ Omrails::Application.configure do
   # in models - user.rb 
   # The part in yellow WAS: 'localhost:3000'
   config.action_mailer.default_url_options = { :host => 'http://pacific-beyond-2722.herokuapp.com/' }
+
+  # Configuring Amazon S3 for Paperclip file uploads
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['AWS_BUCKET'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
 end
