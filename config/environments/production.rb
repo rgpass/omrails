@@ -70,5 +70,6 @@ Omrails::Application.configure do
   # There is a RailsCast on this. Can investigate Forgot Password with Devise
   # Workaround is to eliminate Forgot Password functionality. Did this by hiding an option
   # in models - user.rb 
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  # The part in yellow WAS: 'localhost:3000'
+  config.action_mailer.default_url_options = { :host => 'http://pacific-beyond-2722.herokuapp.com/' }
 end
