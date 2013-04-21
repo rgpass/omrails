@@ -74,6 +74,10 @@ Omrails::Application.configure do
   config.action_mailer.default_url_options = { :host => 'http://pacific-beyond-2722.herokuapp.com/' }
 
   # Configuring Amazon S3 for Paperclip file uploads
+  # Since the key information is secret as it's tied to a credit card
+  # these are set via the Terminal and stored there.
+  # For more information, Google config variables
+  # To see the keys, Terminal heroku config
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
